@@ -1,0 +1,15 @@
+<div *ngIf="data"  [style.border-color]="data?.border" class="profile" >
+    <div>
+        <h3>
+            {{data?.title}}
+        </h3>
+    </div>
+    <div>
+        <p>
+            {{data?.body}}
+        </p>
+    </div>
+    <div>
+        <button (click)="emitColor(data?.color)" [style.background]="data?.color" style="color: white;" >Set {{data?.color}}</button>
+    </div>
+</div>
